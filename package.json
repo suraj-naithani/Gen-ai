@@ -1,0 +1,17 @@
+{
+  "name": "chatbots",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tavily/core": "^0.5.9",
+    "dotenv": "^17.2.0",
+    "openai": "^5.9.0"
+  }
+}
