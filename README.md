@@ -1177,3 +1177,160 @@ while (true) {
 - You'll receive data as **Server-Sent Events (SSE)**.
 - Each chunk contains a `data:` payload that includes **part of the response**.
 - You'll need to **parse and append** these chunks in your frontend to build the full response.
+
+## 🤖 Function Calling
+
+Let’s break down OpenAI Function Calling in the easiest way possible. Think of it as giving GPT **superpowers** by letting it use **your real code** to get stuff done!
+
+### 📘 Chapter 1: What Is Function Calling?
+
+Imagine you’re building a robot (like me 😄). You give it tasks like:
+
+> “Book a flight.”
+
+Now instead of teaching the robot everything about flights, you simply say:
+
+> “When I say ‘book a flight’, go call **this function** I already made.”
+
+#### ✅ So, function calling means:
+- You give **GPT** the ability to use **your functions**.
+- It can **decide when to use them** based on your instructions.
+- It returns **function arguments**, and **you** run the function in your backend.
+
+### 📘 Chapter 2: Why Use Function Calling?
+
+#### 🤔 Without Function Calling:
+> You: “What’s the weather?”  
+> GPT: “I think it’s sunny.” *(based on old training data)*
+
+#### ✅ With Function Calling:
+> You: “What’s the weather?”  
+> GPT: “Let me check…” *(calls your real-time weather API)*  
+> GPT: “It's 29°C and sunny in Dehradun!”
+
+#### 🧠 Perfect for:
+- 🔴 **Live data** (weather, prices, stock updates)
+- 🛠️ **Actions** (bookings, sending emails, running workflows)
+- 🧩 **Custom logic** (databases, filtering, dynamic content)
+
+### 📘 Chapter 3: The 3 Players
+
+| Role     | Description |
+|----------|-------------|
+| 🧑 You   | Define the function and decide what GPT can use. |
+| 🧠 GPT   | Reads user input, decides when to call your function. |
+| 🖥️ Backend | Actually runs the function and returns the result to GPT. |
+
+
+Want a hands-on example next? Like calling a real-time weather API using Node.js and OpenAI function calling? Just say the word. 🌦️
+
+### 📘 Chapter 4: A Simple Example
+
+Let's say you have a function to get the weather:
+
+```bash
+function getWeather(city) {
+  return `It’s sunny in ${city}`;
+}
+```
+
+Now you tell GPT about it:
+
+```bash
+const functions = [
+  {
+    name: "getWeather",
+    description: "Get the weather for a city",
+    parameters: {
+      type: "object",
+      properties: {
+        city: {
+          type: "string",
+          description: "The city name",
+        },
+      },
+      required: ["city"],
+    },
+  }
+];
+```
+
+Then you call GPT:
+
+```bash
+const completion = await openai.chat.completions.create({
+  model: "gpt-4-0613",
+  messages: [{ role: "user", content: "What’s the weather in Delhi?" }],
+  functions,
+});
+```
+
+Now GPT might say:
+
+```bash
+{
+  "function_call": {
+    "name": "getWeather",
+    "arguments": "{ \"city\": \"Delhi\" }"
+  }
+}
+```
+
+It’s telling you: “Hey, I want you to run `getWeather("Delhi")`.”
+
+### 📘 Chapter 5:  Handling the Function
+
+So you now run that function:
+
+```bash 
+const result = getWeather("Delhi");
+```
+
+Then you tell GPT the result:
+
+```bash 
+const finalResponse = await openai.chat.completions.create({
+  model: "gpt-4-0613",
+  messages: [
+    { role: "user", content: "What’s the weather in Delhi?" },
+    {
+      role: "assistant",
+      function_call: {
+        name: "getWeather",
+        arguments: JSON.stringify({ city: "Delhi" }),
+      },
+    },
+    {
+      role: "function",
+      name: "getWeather",
+      content: result, // the answer from your real function
+    },
+  ],
+});
+```
+GPT will now say:
+>“It’s sunny in Delhi!”
+
+### 📘 Chapter 6: Summary (TL;DR)
+
+-  You define what GPT is allowed to call
+- ✅ GPT picks the right one and sends input
+- ✅ You run it and give the output back
+- ✅ GPT continues the convo based on real data
+
+### 📘 Chapter 7: Real-Life Use Cases
+
+| 💡 Use Case         | 🧩 Function Signature                          |
+|---------------------|-----------------------------------------------|
+| 🌦️ Weather          | `getWeather(city)`                            |
+| 🪙 Crypto Price     | `getCryptoPrice(coin)`                        |
+| ✈️ Book Flight       | `bookFlight(name, date, from, to)`            |
+| ⏰ Set Reminder      | `createReminder(text, date)`                  |
+| 📡 Call Your API     | `fetchUserData(userId)`                       |
+
+### 📘Chapter 8: Example
+
+This code shows how to use **OpenAI function calling** to make a chatbot smart — it can call real functions like `getWeather` or `summarize` when needed.  
+It also uses **memory** by saving previous chat messages, so the bot remembers the conversation context.
+
+🔗 [View on GitHub](https://github.com/suraj-naithani/Gen-ai/blob/main/weather-chatbot.js)
