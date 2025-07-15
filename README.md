@@ -71,8 +71,6 @@ This is original content created by the AI — not copy-pasted.
 - Coding (Generate functions, fix bugs)  
 - Healthcare (Suggest diagnoses, generate reports)
 
-***
-
 ## 🧪 Quick Fun Exercise:
 
 **You type:**  
@@ -458,8 +456,6 @@ It stops right before closing brace — useful for **structured outputs**.
 | Type           | String or list of strings (e.g., `["User:", "\n"]`)      |
 | Common Use     | Chatbots, JSON, code, Q&A, structured text               |
 
-***
-
 ## 💡 In One Line
 
 **Stop Sequence** tells the model:  
@@ -740,6 +736,73 @@ Use [OpenAI’s tokenizer tool](https://platform.openai.com/tokenizer) to check 
 ### 🧠 In One Line
 
 > The **context window** is how much text (in tokens) an AI model can **"see and remember" at once** — like its **short-term brain space**.
+
+## 13.Memory (Long-Term Brain)
+Think of **Memory** like a notebook where Gen AI writes down important stuff to remember for future chats.
+
+- **Without memory**: It's like talking to a goldfish. You say: “My name is Suraj,” Next second? It forgets. 🐠
+
+- **With memory**: You say: “My name is Suraj,” and next time it greets you like:  
+  _“Hey Suraj, back to break more code, huh?”_
+
+In tools like ChatGPT, memory is optional and usually NOT active by default. But some platforms let the AI store and recall facts, tasks, notes, etc.
+
+### 📌 Simple Example:
+```bash
+You: My dog's name is Bruno.
+(With memory ON, the AI saves: dog name = Bruno)
+
+You (next day): What’s my dog’s name?
+AI: Bruno!
+
+```
+>✅ Memory = stored knowledge across conversations.
+
+## 15. Context (Short-Term Brain)
+**Context** is like the current conversation history. It's what the AI remembers *right now* — like short-term working memory.
+
+- You ask: “What’s 2+2?” → AI says: “4”
+- You say: “And add 5 more?” → It needs the previous message to know you're referring to "4".
+
+If too much stuff is happening, older context gets forgotten — like a brain with a limited number of sticky notes.
+
+### Limits:
+- GPT-4 has a 128k token context window (~300 pages of text).
+- Beyond that, old messages may be dropped or compressed.
+
+>🧠 Context = chat history the model can “see” right now.
+
+## 16. Looping (Function Calling / Tool Use)
+
+Now let’s get to looping, which is kinda like Gen AI calling itself or doing tasks again and again (with variations) until something is “done.”
+
+There are two flavors:
+
+a. Prompt-based Looping (You simulate it)
+You write:
+
+> “Generate 5 blog titles. If none sound catchy, improve and try again.”
+
+The model follows your prompt and might try multiple outputs in one go — but it’s still one big request. You're faking a loop inside the prompt.
+
+b. Real Looping (Using Tools / Code)
+This is where you tell the AI:
+>**“If X happens, call this function again.”**
+
+Like:
+```bash
+while (quality < 90%) {
+    call GPT with new prompt;
+}
+```
+You can combine this with function calling (OpenAI or LangChain style):
+
+### Example:
+**User**: “Summarize this document.”  
+**AI**: Calls a summarize() function  
+**System checks length** → If it’s still too long, it loops again.
+
+
 
 ## 🧠 Zero-shot Learning
 
@@ -1178,6 +1241,7 @@ while (true) {
 - Each chunk contains a `data:` payload that includes **part of the response**.
 - You'll need to **parse and append** these chunks in your frontend to build the full response.
 
+
 ## 🤖 Function Calling
 
 Let’s break down OpenAI Function Calling in the easiest way possible. Think of it as giving GPT **superpowers** by letting it use **your real code** to get stuff done!
@@ -1333,4 +1397,4 @@ GPT will now say:
 This code shows how to use **OpenAI function calling** to make a chatbot smart — it can call real functions like `getWeather` or `summarize` when needed.  
 It also uses **memory** by saving previous chat messages, so the bot remembers the conversation context.
 
-🔗 [View on GitHub](https://github.com/suraj-naithani/Gen-ai/blob/main/weather-chatbot.js)
+🔗 [View on GitHub](https://github.com/your-username/your-repo/blob/main/index.js)
