@@ -1,48 +1,70 @@
 # Generative AI
 
 ## Table of Contents
-- [🔍 What is Generative AI?](#what-is-generative-ai)
-  - [💡 Simple Definition](#simple-definition)
-  - [🤖 Real-Life Analogy](#real-life-analogy)
-  - [🧠 How Does It Work?](#how-does-it-work)
-  - [🎨 Examples of What Generative AI Can Do](#examples-of-what-generative-ai-can-do)
-  - [🧑‍💻 Example (Text)](#example-text)
-  - [🔁 Types of GenAI Models](#types-of-genai-models)
-  - [🤔 Where is it Used Today?](#where-is-it-used-today)
-  - [🧪 Quick Fun Exercise](#quick-fun-exercise)
-  - [✅ Summary](#summary)
-- [🔑 Important Keywords in GenAI](#important-keywords-in-genai)
-  - [1. Token](#token)
-  - [2. Prompt](#prompt)
-  - [3. Completion / Output](#completion-output)
-  - [4. Temperature](#temperature)
-  - [5. Top-k Sampling](#top-k-sampling)
-  - [6. Top-p (Nucleus) Sampling](#top-p-nucleus-sampling)
-  - [7. Max Tokens](#max-tokens)
-  - [8. Stop Sequence](#stop-sequence)
-  - [9. Fine-tuning](#fine-tuning)
-  - [10. Embeddings](#embeddings)
-  - [11. RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)
-  - [12. Context Window](#context-window)
-  - [13. Memory (Long-Term Brain)](#memory-long-term-brain)
-  - [15. Context (Short-Term Brain)](#context-short-term-brain)
-  - [16. Looping (Function Calling / Tool Use)](#looping-function-calling-tool-use)
-  - [🧠 Zero-shot Learning](#zero-shot-learning)
-  - [🧠 Few-shot Learning](#few-shot-learning)
-  - [🧠 Chain-of-Thought (CoT) Reasoning](#chain-of-thought-cot-reasoning)
-  - [🧠 LLM (Large Language Model)](#llm-large-language-model)
-- [🤖 What is a Chatbot?](#what-is-a-chatbot)
-  - [🛠️ What We’ll Build First](#what-well-build-first)
-- [📡 What is Streaming in OpenAI?](#what-is-streaming-in-openai)
-- [🤖 Function Calling](#function-calling)
-  - [Chapter 1: What Is Function Calling?](#chapter-1-what-is-function-calling)
-  - [Chapter 2: Why Use Function Calling?](#chapter-2-why-use-function-calling)
-  - [Chapter 3: The 3 Players](#chapter-3-the-3-players)
-  - [Chapter 4: A Simple Example](#chapter-4-a-simple-example)
-  - [Chapter 5: Handling the Function](#chapter-5-handling-the-function)
-  - [Chapter 6: Summary (TL;DR)](#chapter-6-summary-tldr)
-  - [Chapter 7: Real-Life Use Cases](#chapter-7-real-life-use-cases)
-  - [Chapter 8: Example](#chapter-8-example)
+
+- **🔍 What is Generative AI?**  
+  - [💡 Simple Definition](#simple-definition)  
+  - [🤖 Real-Life Analogy](#real-life-analogy)  
+  - [🧠 How Does It Work?](#how-does-it-work)  
+  - [🎨 Examples of What Generative AI Can Do](#examples-of-what-generative-ai-can-do)  
+  - [🧑‍💻 Example (Text)](#example-text)  
+  - [🔁 Types of GenAI Models](#types-of-genai-models)  
+  - [🤔 Where is it Used Today?](#where-is-it-used-today)  
+  - [🧪 Quick Fun Exercise](#quick-fun-exercise)  
+  - [✅ Summary](#summary)  
+
+- **🔑 Important Keywords in GenAI**  
+  - [1️⃣ Token](#token)  
+  - [2️⃣ Prompt](#prompt)  
+  - [3️⃣ Completion / Output](#completion-output)  
+  - [4️⃣ Temperature](#temperature)  
+  - [5️⃣ Top-k Sampling](#top-k-sampling)  
+  - [6️⃣ Top-p (Nucleus) Sampling](#top-p-nucleus-sampling)  
+  - [7️⃣ Max Tokens](#max-tokens)  
+  - [8️⃣ Stop Sequence](#stop-sequence)  
+  - [9️⃣ Fine-tuning](#fine-tuning)  
+  - [🔟 Embeddings](#embeddings)  
+  - [1️⃣1️⃣ RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)  
+  - [1️⃣2️⃣ Context Window](#context-window)  
+  - [1️⃣3️⃣ Memory (Long-Term Brain)](#memory-long-term-brain)  
+  - [1️⃣5️⃣ Context (Short-Term Brain)](#context-short-term-brain)  
+  - [1️⃣6️⃣ Looping (Function Calling / Tool Use)](#looping-function-calling-tool-use)  
+  - [🧠 Zero-shot Learning](#zero-shot-learning)  
+  - [🧠 Few-shot Learning](#few-shot-learning)  
+  - [🧠 Chain-of-Thought (CoT) Reasoning](#chain-of-thought-cot-reasoning)  
+  - [🧠 LLM (Large Language Model)](#llm-large-language-model)  
+
+- **🤖 What is a Chatbot?**  
+  - [🛠️ What We’ll Build First](#what-well-build-first)  
+
+- **📡 What is Streaming in OpenAI?**  
+  - [What is Streaming in OpenAI?](#what-is-streaming-in-openai)  
+
+- **🤖 Function Calling**  
+  - [📖 Chapter 1: What Is Function Calling?](#chapter-1-what-is-function-calling)  
+  - [📖 Chapter 2: Why Use Function Calling?](#chapter-2-why-use-function-calling)  
+  - [📖 Chapter 3: The 3 Players](#chapter-3-the-3-players)  
+  - [📖 Chapter 4: A Simple Example](#chapter-4-a-simple-example)  
+  - [📖 Chapter 5: Handling the Function](#chapter-5-handling-the-function)  
+  - [📖 Chapter 6: Summary (TL;DR)](#chapter-6-summary-tldr)  
+  - [📖 Chapter 7: Real-Life Use Cases](#chapter-7-real-life-use-cases)  
+  - [📖 Chapter 8: Example](#chapter-8-example)  
+
+- **🤖 RAG (Retrieval-Augmented Generation)**  
+  - [🔍 What is RAG?](#what-is-rag)
+  - [🧱 Key Components of RAG](#key-components-of-rag)
+  - [🔍 Understanding the Start of the RAG Process](#understanding-the-start-of-the-rag-process)
+  - [📚 Step-by-Step Theory (with Examples)](#step-by-step-theory-with-examples)
+    - [Step 1: Prepare Your Data](#step-1-prepare-your-data-docs-faqs-etc)
+    - [Step 2: Chunking 🍕](#step-2-chunking)
+    - [Step 3: Embedding 📐](#step-3-embedding)
+    - [Step 4: Store in Vector DB 🧠](#step-4-store-in-vector-db)
+    - [Step 5: Ask a Question 🗣️](#step-5-ask-a-question)
+    - [Step 6: Generate Answer using OpenAI 💡](#step-6-generate-answer-using-openai)
+  - [🔁 Flow Diagram with Arrows](#flow-diagram-with-arrows)
+  - [RAQ Q&A Flow](#raq-qa-flow)
+  - [RAG Example](#rag-example)
+ 
 
 ## 🔍 What is Generative AI? <a id="what-is-generative-ai"></a>
 
@@ -1442,3 +1464,190 @@ This code shows how to use **OpenAI function calling** to make a chatbot smart �
 It also uses **memory** by saving previous chat messages, so the bot remembers the conversation context.
 
 🔗 [View on GitHub](https://github.com/your-username/your-repo/blob/main/index.js)
+
+## 🔍 What is RAG? <a id="what-is-rag"></a>
+
+Imagine you’re writing an answer to a question. But instead of relying only on your memory, you Google the latest articles, pick the most helpful ones, and then write your reply.
+
+That’s exactly what RAG does!
+
+>RAG = Retrieval (search) + Generation (write)
+
+It first retrieves relevant documents.
+
+Then it generates an answer using those documents.
+
+### 🧱 Key Components of RAG <a id="key-components-of-rag"></a>
+
+| Component | Role in RAG | Analogy |
+|:---------|:------------|:--------|
+| 🔍 Retriever | Finds relevant chunks from your documents | Like Googling answers |
+| 🧩 Chunking | Splits large texts into small pieces | Like cutting a pizza into slices |
+| 📐 Embeddings | Converts text into numbers for comparison | Like turning words into coordinates |
+| 📚 Vector Store | Stores and indexes these number-versions | Like a giant smart filing cabinet |
+| 🧠 LLM (ChatGPT) | Reads the retrieved chunks and answers | Like a smart student writing essays |
+
+## 🔍 Understanding the Start of the RAG Process <a id="understanding-the-start-of-the-rag-process"></a>
+
+> 📝 *Let us look at how the RAG process begins — the chart above is just for illustration purposes only.*
+
+### 📄 Input Document (PDF with 10M Tokens)
+
+The document, which contains a large number of tokens (e.g., words or characters), is broken down into smaller, manageable chunks.  
+Each chunk typically contains around **1,000 tokens**. This makes it easier to process and analyze large texts.
+
+### ✂️ Chunking Process
+
+The large text document is divided into smaller “chunks” of text.  
+For instance, if you have a PDF document, it could be split into several sections or paragraphs — each considered a **chunk**.
+
+### 🧠 Embedding Generation
+
+Each chunk is then processed by a **Language Model (LLM) embedder**,  
+which converts the text into an **embedding** — a numerical representation of the text.
+
+This embedding captures the **semantic meaning** of the text and is represented as a **vector** (a list of numbers).
+
+**Example:**
+```bash
+"Dog" → [1, 2, 4, 1]
+"Cat" → [1, 2, 3, 2]
+"House" → [0, 3, 7, 9]
+```
+
+### 🗃️ Vector Store
+
+The embeddings (numerical representations) of all the chunks are stored in a **vector store**.
+
+This is a database optimized for storing and retrieving **high-dimensional vectors**.
+
+The vector store is used to **quickly find relevant chunks based on a query** made during the Q&A process.
+
+
+## 📚 Step-by-Step Theory (with Examples) <a id="step-by-step-theory-with-examples"></a>
+
+### Step 1: Prepare Your Data (Docs, FAQs, etc.) <a id="step-1-prepare-your-data-docs-faqs-etc"></a>
+You have some documents like this:
+
+```bash
+"Bananas are rich in potassium and are good for heart health."
+"Apples contain antioxidants and fiber."
+"Mangoes are tropical fruits high in Vitamin C."
+```
+
+### Step 2: Chunking 🍕 <a id="step-2-chunking"></a>
+If a document is too big, we break it into smaller overlapping chunks.
+
+✅ **Why?**
+- LLMs can only read a few tokens (words) at a time.
+- Overlapping helps keep context between chunks.
+
+✂️ **Example:**
+```makefile
+Original:
+"Bananas are rich in potassium. They are good for the heart and digestion."
+
+Chunk 1 (0-50 chars): "Bananas are rich in potassium. They are good"
+Chunk 2 (20-70 chars): "They are good for the heart and digestion."
+```
+So you slide a window over the text with some overlap.
+
+### Step 3: Embedding 📐 <a id="step-3-embedding"></a>
+We convert each chunk into a vector (array of numbers). These represent the meaning of the text.
+
+Use OpenAI Embeddings API or something like `@pinecone-database/doc-splitter`.
+
+**Example using OpenAI:**
+```js
+const { OpenAI } = require('openai');
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+async function embedText(text) {
+  const res = await openai.embeddings.create({
+    model: 'text-embedding-3-small',
+    input: text,
+  });
+
+  return res.data[0].embedding; // returns a vector of floats
+}
+```
+
+### Step 4: Store in Vector DB 🧠 <a id="step-4-store-in-vector-db"></a>
+Use vector DBs like:
+
+- Pinecone
+- Weaviate
+- Chroma
+- FAISS (for local use)
+
+They allow semantic search: Find the most similar chunks based on meaning, not keywords.
+
+We’ll use Chroma (local) for this example to keep it simple.
+
+### Step 5: Ask a Question 🗣️ <a id="step-5-ask-a-question"></a>
+Let’s say you ask:
+
+```bash
+"What fruit is good for the heart?"
+```
+
+- Convert your question into an embedding
+- Search similar chunks in the vector DB
+- Get top 3 matching texts
+
+### Step 6: Generate Answer using OpenAI 💡 <a id="step-6-generate-answer-using-openai"></a>
+Pass the retrieved texts + question into gpt-4:
+
+```js
+const prompt = `
+Context:
+1. Bananas are rich in potassium and good for heart health.
+2. Apples contain antioxidants.
+
+Question: What fruit is good for the heart?
+
+Answer:
+`;
+
+const chatRes = await openai.chat.completions.create({
+  model: 'gpt-4',
+  messages: [{ role: 'user', content: prompt }],
+});
+```
+
+The LLM reads the context and writes a **smart answer**.
+
+### 🔁 Flow Diagram with Arrows <a id="flow-diagram-with-arrows"></a>
+
+```bash
+[User Asks Question]
+         ↓
+  [Retriever (Vector DB)]
+         ↓
+[Find Relevant Chunks]
+         ↓
+[Send Chunks + Question to LLM]
+         ↓
+     [LLM Generates Answer]
+         ↓
+     [Return Answer to User]
+
+```
+
+### RAQ Q&A Flow <a id="raq-qa-flow"></a>
+
+- **Question Input**: The process begins with a user posing a question (RAQ — Retrieval-Augmented Question Answering).
+- **Retrieval Step**: The question is processed by a retriever model, which checks the stored chunks of text (from the vector store) to find the most relevant information. This step is based on similarity scoring (e.g., scores between 0.0 to 1.0).
+- **Chunk Retrieval**: The retriever pulls out the most relevant chunks of text that are likely to contain the answer to the user’s question.
+- **AI Processing**: These retrieved chunks, along with the original question, are passed to an AI model like ChatGPT. The AI model processes the input and generates an appropriate response.
+- **Response to User**: Finally, the AI’s response is sent back to the user, completing the Q&A flow.
+
+Combining the entire Q&A Flow along with the Vector Store looks like this.
+
+### RAG Example <a id="rag-example"></a>
+
+This code shows how to use Retrieval-Augmented Generation (RAG) to make a chatbot smarter — it finds and uses real text chunks from data.txt to answer questions.
+It also uses embeddings to compare the user's question with saved notes and respond with context-aware answers.
+
+🔗 [View on GitHub](https://github.com/suraj-naithani/Gen-ai/blob/main/rag.js)
