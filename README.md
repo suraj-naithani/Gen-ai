@@ -1,13 +1,57 @@
 # Generative AI
 
-## 🔍 What is Generative AI?
+## Table of Contents
+- [🔍 What is Generative AI?](#what-is-generative-ai)
+  - [💡 Simple Definition](#simple-definition)
+  - [🤖 Real-Life Analogy](#real-life-analogy)
+  - [🧠 How Does It Work?](#how-does-it-work)
+  - [🎨 Examples of What Generative AI Can Do](#examples-of-what-generative-ai-can-do)
+  - [🧑‍💻 Example (Text)](#example-text)
+  - [🔁 Types of GenAI Models](#types-of-genai-models)
+  - [🤔 Where is it Used Today?](#where-is-it-used-today)
+  - [🧪 Quick Fun Exercise](#quick-fun-exercise)
+  - [✅ Summary](#summary)
+- [🔑 Important Keywords in GenAI](#important-keywords-in-genai)
+  - [1. Token](#token)
+  - [2. Prompt](#prompt)
+  - [3. Completion / Output](#completion-output)
+  - [4. Temperature](#temperature)
+  - [5. Top-k Sampling](#top-k-sampling)
+  - [6. Top-p (Nucleus) Sampling](#top-p-nucleus-sampling)
+  - [7. Max Tokens](#max-tokens)
+  - [8. Stop Sequence](#stop-sequence)
+  - [9. Fine-tuning](#fine-tuning)
+  - [10. Embeddings](#embeddings)
+  - [11. RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)
+  - [12. Context Window](#context-window)
+  - [13. Memory (Long-Term Brain)](#memory-long-term-brain)
+  - [15. Context (Short-Term Brain)](#context-short-term-brain)
+  - [16. Looping (Function Calling / Tool Use)](#looping-function-calling-tool-use)
+  - [🧠 Zero-shot Learning](#zero-shot-learning)
+  - [🧠 Few-shot Learning](#few-shot-learning)
+  - [🧠 Chain-of-Thought (CoT) Reasoning](#chain-of-thought-cot-reasoning)
+  - [🧠 LLM (Large Language Model)](#llm-large-language-model)
+- [🤖 What is a Chatbot?](#what-is-a-chatbot)
+  - [🛠️ What We’ll Build First](#what-well-build-first)
+- [📡 What is Streaming in OpenAI?](#what-is-streaming-in-openai)
+- [🤖 Function Calling](#function-calling)
+  - [Chapter 1: What Is Function Calling?](#chapter-1-what-is-function-calling)
+  - [Chapter 2: Why Use Function Calling?](#chapter-2-why-use-function-calling)
+  - [Chapter 3: The 3 Players](#chapter-3-the-3-players)
+  - [Chapter 4: A Simple Example](#chapter-4-a-simple-example)
+  - [Chapter 5: Handling the Function](#chapter-5-handling-the-function)
+  - [Chapter 6: Summary (TL;DR)](#chapter-6-summary-tldr)
+  - [Chapter 7: Real-Life Use Cases](#chapter-7-real-life-use-cases)
+  - [Chapter 8: Example](#chapter-8-example)
 
-### 💡 Simple Definition
+## 🔍 What is Generative AI? <a id="what-is-generative-ai"></a>
+
+### 💡 Simple Definition <a id="simple-definition"></a>
 **Generative AI** is a type of **artificial intelligence** that can create new content — like text, images, videos, code, music, etc. — just like humans do.
 
 Instead of just analyzing or recognizing data, it actually generates something new from what it has learned.
 
-### 🤖 Real-Life Analogy
+### 🤖 Real-Life Analogy  <a id="real-life-analogy"></a>
 Imagine a super smart robot that has read millions of books and can now:
 
 - Write a new story
@@ -18,7 +62,7 @@ Imagine a super smart robot that has read millions of books and can now:
 
 That robot is Generative AI.
 
-### 🧠 How Does It Work?
+### 🧠 How Does It Work? <a id="how-does-it-work"></a>
 Generative AI learns patterns from vast amounts of data, including:
 
 - Text (books, websites, articles)
@@ -27,7 +71,7 @@ Generative AI learns patterns from vast amounts of data, including:
 
 When given a prompt, such as a question or task, it uses these learned patterns to generate new, original content.
 
-### 🎨 Examples of What Generative AI Can Do
+### 🎨 Examples of What Generative AI Can Do <a id="examples-of-what-generative-ai-can-do"></a>
 | Use Case            | Example                                           |
 |---------------------|--------------------------------------------------|
 | ✍️ Text Generation   | ChatGPT writes a blog or story for you           |
@@ -37,7 +81,7 @@ When given a prompt, such as a question or task, it uses these learned patterns 
 | 🎵 Music Creation   | AI makes a new song in the style of your favorite artist |
 | 💻 Code Generation  | Copilot writes code based on what you want to build |
 
-## 🧑‍💻 Example (Text):
+## 🧑‍💻 Example (Text): <a id="example-text"></a>
 
 **Prompt:**  
 >“Write a funny poem about a banana going to space.”
@@ -51,7 +95,7 @@ And danced on the moon with a cake. 🧁🚀
 
 This is original content created by the AI — not copy-pasted.
 
-## 🔁 Types of GenAI Models
+## 🔁 Types of GenAI Models <a id="types-of-genai-models"></a>
 
 | Type   | Famous Models                                 | What they Generate       |
 |--------|-----------------------------------------------|---------------------------|
@@ -61,7 +105,7 @@ This is original content created by the AI — not copy-pasted.
 | Music  | Suno, MusicGen                                | Songs, beats              |
 | Code   | GitHub Copilot, Code LLaMA                    | Programming code          |
 
-## 🤔 Where is it Used Today?
+## 🤔 Where is it Used Today? <a id="where-is-it-used-today"></a>
 
 - Chatbots (Customer support)  
 - Virtual assistants (Like Siri, Alexa, ChatGPT)  
@@ -71,7 +115,7 @@ This is original content created by the AI — not copy-pasted.
 - Coding (Generate functions, fix bugs)  
 - Healthcare (Suggest diagnoses, generate reports)
 
-## 🧪 Quick Fun Exercise:
+## 🧪 Quick Fun Exercise: <a id="quick-fun-exercise"></a>
 
 **You type:**  
 >"Create a startup idea that involves pizza and robots"
@@ -81,7 +125,7 @@ This is original content created by the AI — not copy-pasted.
 
 ✨ *See? It creates ideas on the fly!*
 
-## ✅ Summary
+## ✅ Summary <a id="summary"></a>
 
 | Term       | Meaning                          |
 |------------|----------------------------------|
@@ -93,9 +137,9 @@ This is original content created by the AI — not copy-pasted.
 
 ---
 
-# 🔑 Important Keywords in GenAI (Explained Simply)
+# 🔑 Important Keywords in GenAI (Explained Simply) <a id="important-keywords-in-genai"></a>
 
-## 1. Token
+## 1. Token <a id="token"></a>
 
 📘 **What is it?**  
 A token is a piece of text — could be a word, part of a word, or even punctuation.
@@ -115,7 +159,7 @@ Each model uses its own tokenizer. GPT usually breaks words into sub-words.
 - There are limits (e.g., GPT-4 can handle ~128k tokens max).
 
 
-## 2. Prompt
+## 2. Prompt <a id="prompt"></a>
 
 📘 **What is it?**  
 A prompt is the input or question you give to the AI.
@@ -126,7 +170,7 @@ A prompt is the input or question you give to the AI.
 The AI takes your prompt and generates a response.
 
 
-## 3. Completion / Output
+## 3. Completion / Output <a id="completion-output"></a>
 
 📘 **What is it?**  
 The AI’s response to your prompt.
@@ -139,7 +183,7 @@ The completion might be:
 >“Why did the computer go to therapy? Because it had too many bugs!”
 
 
-## 4. Temperature?
+## 4. Temperature? <a id="temperature"></a>
 
 It is a float value (e.g., 0.0 to 2.0) that adjusts the probability distribution over possible next words when the model is generating text.
 
@@ -185,7 +229,7 @@ Let’s say the model is trying to generate the next word after:
 ### 🧠 In Short:
 >Temperature controls how boring or bold your AI's response is.
 
-## 5. Top-k Sampling
+## 5. Top-k Sampling <a id="top-k-sampling"></a>
 
 Top-k sampling is a method where the model:
 >Only considers the **top k most likely next words**, and randomly picks one from them based on their probabilities.
@@ -247,7 +291,7 @@ Top predicted probabilities:
 
 > Top-k sampling = “Only pick from the top k best options”, then choose one based on probability.**
 
-## 6. Top-p (Nucleus) Sampling
+## 6. Top-p (Nucleus) Sampling <a id="top-p-nucleus-sampling"></a>
 
 Top-p sampling picks from the smallest set of words whose total probability adds up to **p** (like 0.9), and samples randomly from that set.
 
@@ -310,7 +354,7 @@ So now, we randomly pick from:
 
 > Top-p Sampling** picks from a dynamic shortlist of most likely words whose **combined probability ≥ p**, and samples randomly from there.
 
-## 7. Max Tokens
+## 7. Max Tokens <a id="max-tokens"></a>
 
 **Max Tokens** controls how long the output can be from a language model like GPT.
 
@@ -380,7 +424,7 @@ Softly purring through the day..."
 
 > Max Tokens** limits how much the model can say — like cutting it off after a certain number of words/pieces.
 
-## 8. Stop Sequence
+## 8. Stop Sequence <a id="stop-sequence"></a>
 
 A **stop sequence** is a custom string or token that tells the language model:
 
@@ -461,7 +505,7 @@ It stops right before closing brace — useful for **structured outputs**.
 **Stop Sequence** tells the model:  
 > *“Stop Sequence tells the model: “Stop writing when you hit this word or phrase.”*
 
-# 9. Fine-tuning
+# 9. Fine-tuning  <a id="fine-tuning"></a>
 
 **Fine-tuning** is the process of training a pre-trained language model on your own custom dataset, so it learns to give more specific, domain-relevant, or personalized responses.
 
@@ -520,7 +564,7 @@ To make it:
 
 > *Fine-tuning** teaches a pre-trained AI model to act like an expert in your specific use case, using your own training data.
 
-## 10. Embeddings
+## 10. Embeddings  <a id="embeddings"></a>
 
 An **embedding** is a way to convert text into numbers so that a machine can understand it — but not just random numbers:  
 
@@ -594,7 +638,7 @@ The **embedding space** has **hundreds or thousands of dimensions** (not just 3)
 
 > **Embeddings** = turning words or sentences into numbers that represent their meaning, so machines can **compare** and **reason** about them.
 
-## 🔎11. RAG (Retrieval-Augmented Generation)
+## 🔎11. RAG (Retrieval-Augmented Generation)<a id="rag-retrieval-augmented-generation"></a>
 
 **RAG** is a technique where a language model (like GPT) is given access to **external information** (retrieval) before it generates answers (generation).
 
@@ -671,7 +715,7 @@ You ask:
 
 > **RAG** = Letting AI *"look up"* relevant info before answering,so it’s more **accurate**, **up-to-date**, and **useful**.
 
-## 12. Context Window
+## 12. Context Window <a id="context-window"></a>
 
 The **context window** is the **maximum number of tokens** (words, parts of words, or symbols) a language model can "see" at once during a conversation or prompt.
 
@@ -737,7 +781,7 @@ Use [OpenAI’s tokenizer tool](https://platform.openai.com/tokenizer) to check 
 
 > The **context window** is how much text (in tokens) an AI model can **"see and remember" at once** — like its **short-term brain space**.
 
-## 13.Memory (Long-Term Brain)
+## 13.Memory (Long-Term Brain) <a id="memory-long-term-brain"></a>
 Think of **Memory** like a notebook where Gen AI writes down important stuff to remember for future chats.
 
 - **Without memory**: It's like talking to a goldfish. You say: “My name is Suraj,” Next second? It forgets. 🐠
@@ -758,7 +802,7 @@ AI: Bruno!
 ```
 >✅ Memory = stored knowledge across conversations.
 
-## 15. Context (Short-Term Brain)
+## 15. Context (Short-Term Brain) <a id="context-short-term-brain"></a>
 **Context** is like the current conversation history. It's what the AI remembers *right now* — like short-term working memory.
 
 - You ask: “What’s 2+2?” → AI says: “4”
@@ -772,7 +816,7 @@ If too much stuff is happening, older context gets forgotten — like a brain wi
 
 >🧠 Context = chat history the model can “see” right now.
 
-## 16. Looping (Function Calling / Tool Use)
+## 16. Looping (Function Calling / Tool Use) <a id="looping-function-calling-tool-use"></a>
 
 Now let’s get to looping, which is kinda like Gen AI calling itself or doing tasks again and again (with variations) until something is “done.”
 
@@ -804,7 +848,7 @@ You can combine this with function calling (OpenAI or LangChain style):
 
 
 
-## 🧠 Zero-shot Learning
+## 🧠 Zero-shot Learning <a id="zero-shot-learning"></a>
 
 > Ask the model to do something **without giving it any examples**.
 
@@ -823,7 +867,7 @@ Basically saying:
 
 🔍 You didn’t teach it anything — it just knew what to do.
 
-## 🧠 Few-shot Learning
+## 🧠 Few-shot Learning <a id="few-shot-learning"></a>
 
 > Ask the model to do something by giving it **a few examples first**, then a new input.
 
@@ -844,7 +888,7 @@ English: How are you → French:
 
 🧠 This is **few-shot** because you showed **a few examples**, then gave a new case.
 
-## 🧠 Chain-of-Thought (CoT) Reasoning
+## 🧠 Chain-of-Thought (CoT) Reasoning <a id="chain-of-thought-cot-reasoning"></a>
 You ask the model to **think step by step**, not just give the answer.
 
 Useful for **math, logic, or complex problems** where reasoning is needed.
@@ -890,7 +934,7 @@ Answer: 20
 >**- Chain-of-Thought = Ask it to explain its reasoning step-by-step**
 
 
-## 🧠 LLM (Large Language Model)
+## 🧠 LLM (Large Language Model) <a id="llm-large-language-model"></a>
 
 An LLM is an AI model trained on a **huge amount of text data** that can understand, generate, and manipulate human language.
 
@@ -1107,14 +1151,14 @@ Imagine this as a movie:
 
 >**A Large Language Model is a powerful AI trained on tons of text, capable of reading, writing, and understanding human language — like a digital brain for words.**
 
-# 🧠 What is a Chatbot?
+# 🧠 What is a Chatbot? <a id="what-is-a-chatbot"></a>
 
 A **chatbot** is a software app that talks to users, like me (ChatGPT).  
 You give it a question, it gives you an answer.
 
 A **GenAI chatbot** means we use **Generative AI** (like OpenAI GPT models) to power the brain of the bot.
 
-### 🛠️ What We’ll Build First
+### 🛠️ What We’ll Build First <a id="what-well-build-first"></a>
 
 A simple chatbot using:
 
@@ -1166,7 +1210,7 @@ function askQuestion() {
 askQuestion();
 ```
 
-## 📡 What is Streaming in OpenAI?
+## 📡 What is Streaming in OpenAI? <a id="what-is-streaming-in-openai"></a>
 
 In OpenAI, **streaming** refers to delivering responses from models (like ChatGPT) **incrementally** instead of all at once. 
 
@@ -1242,11 +1286,11 @@ while (true) {
 - You'll need to **parse and append** these chunks in your frontend to build the full response.
 
 
-## 🤖 Function Calling
+## 🤖 Function Calling <a id="function-calling"></a>
 
 Let’s break down OpenAI Function Calling in the easiest way possible. Think of it as giving GPT **superpowers** by letting it use **your real code** to get stuff done!
 
-### 📘 Chapter 1: What Is Function Calling?
+### 📘 Chapter 1: What Is Function Calling? <a id="chapter-1-what-is-function-calling"></a>
 
 Imagine you’re building a robot (like me 😄). You give it tasks like:
 
@@ -1261,7 +1305,7 @@ Now instead of teaching the robot everything about flights, you simply say:
 - It can **decide when to use them** based on your instructions.
 - It returns **function arguments**, and **you** run the function in your backend.
 
-### 📘 Chapter 2: Why Use Function Calling?
+### 📘 Chapter 2: Why Use Function Calling? <a id="chapter-2-why-use-function-calling"></a>
 
 #### 🤔 Without Function Calling:
 > You: “What’s the weather?”  
@@ -1277,7 +1321,7 @@ Now instead of teaching the robot everything about flights, you simply say:
 - 🛠️ **Actions** (bookings, sending emails, running workflows)
 - 🧩 **Custom logic** (databases, filtering, dynamic content)
 
-### 📘 Chapter 3: The 3 Players
+### 📘 Chapter 3: The 3 Players <a id="chapter-3-the-3-players"></a>
 
 | Role     | Description |
 |----------|-------------|
@@ -1288,7 +1332,7 @@ Now instead of teaching the robot everything about flights, you simply say:
 
 Want a hands-on example next? Like calling a real-time weather API using Node.js and OpenAI function calling? Just say the word. 🌦️
 
-### 📘 Chapter 4: A Simple Example
+### 📘 Chapter 4: A Simple Example <a id="chapter-4-a-simple-example"></a>
 
 Let's say you have a function to get the weather:
 
@@ -1342,7 +1386,7 @@ Now GPT might say:
 
 It’s telling you: “Hey, I want you to run `getWeather("Delhi")`.”
 
-### 📘 Chapter 5:  Handling the Function
+### 📘 Chapter 5:  Handling the Function <a id="chapter-5-handling-the-function"></a>
 
 So you now run that function:
 
@@ -1375,14 +1419,14 @@ const finalResponse = await openai.chat.completions.create({
 GPT will now say:
 >“It’s sunny in Delhi!”
 
-### 📘 Chapter 6: Summary (TL;DR)
+### 📘 Chapter 6: Summary (TL;DR) <a id="chapter-6-summary-tldr"></a>
 
 -  You define what GPT is allowed to call
 - ✅ GPT picks the right one and sends input
 - ✅ You run it and give the output back
 - ✅ GPT continues the convo based on real data
 
-### 📘 Chapter 7: Real-Life Use Cases
+### 📘 Chapter 7: Real-Life Use Cases <a id="chapter-7-real-life-use-cases"></a>
 
 | 💡 Use Case         | 🧩 Function Signature                          |
 |---------------------|-----------------------------------------------|
@@ -1392,7 +1436,7 @@ GPT will now say:
 | ⏰ Set Reminder      | `createReminder(text, date)`                  |
 | 📡 Call Your API     | `fetchUserData(userId)`                       |
 
-### 📘Chapter 8: Example
+### 📘Chapter 8: Example <a id="chapter-8-example"></a>
 
 This code shows how to use **OpenAI function calling** to make a chatbot smart — it can call real functions like `getWeather` or `summarize` when needed.  
 It also uses **memory** by saving previous chat messages, so the bot remembers the conversation context.
