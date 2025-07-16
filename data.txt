@@ -1,0 +1,4 @@
+ChatGPT was launched by OpenAI in November 2022.
+RAG is a technique to combine retrieval of documents with language models.
+Elon Musk co-founded Tesla and was an early investor in OpenAI.
+c
