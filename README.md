@@ -1,6 +1,6 @@
 # Generative AI
 
-## Table of Contents
+## Table of Content
 
 - **🔍 What is Generative AI?**  
   - [💡 Simple Definition](#simple-definition)  
